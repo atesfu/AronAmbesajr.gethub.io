@@ -1,3 +1,9 @@
+
+*{
+    background-color: lightsteelblue;
+    font-family: Arial;
+      
+}
 h1{
     color: rosybrown;
 }
@@ -6,19 +12,39 @@ h3{
     font-family: Arial Black
 }
 .imgmood{
-    height: 300pt;
-    width: 300pt;
+    height: 50%;
+    width: 30%;
 }
 .imgchecker{
     height: 50px;
     width: 160pt;
 }
+.sad{
+    height: 240px;
+}
 span{
     font-weight: bold;
 }
 
-*{
-    background-color: lightsteelblue;
-    font-family: Arial;
-      
+
+a:link{
+    text-decoration: none; 
+}
+
+a:hover{
+    text-decoration:underline;
+   color: red;
+}
+
+p{
+     font-size: -1.5em;
+   
+}
+dt {
+    color: brown;
+}
+
+ol{
+     display: flex;
+  flex-direction: column-reverse;
 }
