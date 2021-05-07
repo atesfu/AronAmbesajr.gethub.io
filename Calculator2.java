@@ -23,20 +23,26 @@ public class Calculator2 extends HttpServlet {
             double n3=Integer.parseInt(num3);
             String num4=req.getParameter("num8");
             double n4=Integer.parseInt(num4);
+            out.println("<form action='calculator2'>");
             if(!num1.equals("") && !num2.equals("")) {
                 double sum = n1 + n2;
-                out.println("<p>"+n1+"+"+n2+"="+sum+"</p>");
+                out.println("<input name=\"a1\" value="+n1+">+<input name=\"a2\" value="+n2+">=<input name=\"sum1\" value="+sum+" readonly>");
             }
+
+            out.println("<p></p>");
             if(!num3.equals("") && !num4.equals("")) {
                 double mult = n3 + n4;
-                out.println("<p>"+n3+"+"+n4+"="+mult+"</p>");
+                out.println("<input name=\"m1\" value="+n3+">*<input name=\"m2\" value="+n4+">=<input name=\"prod1\" value="+mult+" readonly>");
             }
+            out.print("<br/>");
+            out.print(" <input type=\"submit\" value=\"Submit\" >");
+            out.print("</form>");
 
         }catch (Exception e){
             out.println("Error:" +e.getMessage());
         }
         finally {
-            out.println("<br/>goto home <a href=index.html >Click here</a>");
+            out.println("<br/>goto home <a href=calc.html >Click here</a>");
         }
 
     }
